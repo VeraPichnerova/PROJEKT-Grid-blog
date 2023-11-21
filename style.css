@@ -2,11 +2,10 @@
 html { box-sizing: border-box; }
 *, :after, :before { box-sizing: inherit; }
 
-
 body {
 	margin: 0;
 	padding: 30px;
-	font-family:  'Alice', serif;
+	font-family: 'Alice', serif;
 	font-size: 18px;
 	line-height: 1.5;
 }
@@ -66,3 +65,46 @@ blockquote {
 	- https://www.smashingmagazine.com/2017/04/start-using-css-custom-properties/
 */
 
+article {
+    display: grid;
+    grid-template-columns: 1fr 4fr 2fr;
+    gap: 40px;
+}
+
+header, h2, p, blockquote, footer {
+    grid-column: 2 / 3;
+}
+
+h1, h2 {
+    color: var(--limetka);
+}
+
+h1 {
+    font-size: 80px;
+}
+
+h2 {
+    font-size: 50px;
+}
+
+blockquote {
+    font-size: 30px;
+    color: var(--seda)
+}
+
+
+figure {
+    grid-column: 1 / span 3;
+}
+
+.tip-vlevo {
+    grid-column: 1;
+}
+
+.tip-vlevo img{
+    width:100px;
+}
+
+.tip-vpravo {
+    grid-column: 3;
+}
